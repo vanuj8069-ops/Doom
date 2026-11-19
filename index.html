@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alok | 21st Birthday</title>
+
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ min-height:100vh;
+ overflow-x:hidden;
+ font-family:Arial,sans-serif;
+ color:white;
+ text-align:center;
+ background:
+ radial-gradient(ellipse at 50% 35%,#123e78 0%,transparent 55%),
+ linear-gradient(145deg,#020817,#061b3c,#020817);
+}
+
+.container{
+ width:100%;
+ max-width:700px;
+ margin:auto;
+ padding:25px 18px;
+ position:relative;
+ z-index:2;
+}
+
+.card{
+ background:rgba(8,26,57,.86);
+ border:1px solid #2874b9;
+ border-radius:24px;
+ padding:28px 18px;
+ margin:20px 0;
+ box-shadow:0 0 25px #0876c455;
+}
+
+.small{
+ color:#70c5ff;
+ letter-spacing:4px;
+ font-size:12px;
+}
+
+h1{
+ font-size:clamp(45px,12vw,75px);
+ letter-spacing:7px;
+ margin:20px 0;
+ color:#d8efff;
+ text-shadow:0 0 18px #168cff;
+}
+
+h2{
+ color:#77c7ff;
+ margin:15px 0;
+}
+
+.age{
+ display:inline-block;
+ border:1px solid #63baff;
+ padding:10px 22px;
+ border-radius:30px;
+ color:#a6dcff;
+ font-weight:bold;
+ letter-spacing:3px;
+}
+
+p{
+ line-height:1.8;
+ color:#d5eaff;
+ margin:15px 0;
+ font-size:16px;
+}
+
+button{
+ background:linear-gradient(90deg,#0756a4,#168cff);
+ border:1px solid #83d0ff;
+ color:white;
+ padding:15px 28px;
+ border-radius:30px;
+ font-size:16px;
+ font-weight:bold;
+ margin:18px 5px;
+ box-shadow:0 0 18px #168cff66;
+ cursor:pointer;
+}
+
+button:active{
+ transform:scale(.96);
+}
+
+/* CSS-ONLY DOOM INSPIRED BACKGROUND CHARACTER */
+
+.doom{
+ width:220px;
+ height:260px;
+ margin:25px auto;
+ position:relative;
+ opacity:.85;
+ filter:drop-shadow(0 0 20px #48a8ff);
+}
+
+.hood{
+ position:absolute;
+ width:210px;
+ height:245px;
+ left:5px;
+ top:0;
+ background:linear-gradient(120deg,#153c5c,#071522 55%,#315b70);
+ clip-path:polygon(50% 0,95% 25%,88% 75%,72% 100%,28% 100%,12% 75%,5% 25%);
+ border:2px solid #76b9d7;
+}
+
+.mask{
+ position:absolute;
+ width:112px;
+ height:145px;
+ top:65px;
+ left:54px;
+ background:linear-gradient(100deg,#647f8c,#d0dce0,#536d7b);
+ clip-path:polygon(20% 0,80% 0,100% 25%,88% 100%,12% 100%,0 25%);
+ box-shadow:inset 0 0 20px #071522;
+}
+
+.eye{
+ position:absolute;
+ top:112px;
+ width:27px;
+ height:7px;
+ background:#72d7ff;
+ box-shadow:0 0 12px #20aaff;
+}
+
+.eye.left{left:75px;transform:rotate(10deg)}
+.eye.right{right:75px;transform:rotate(-10deg)}
+
+.nose{
+ position:absolute;
+ top:120px;
+ left:104px;
+ width:12px;
+ height:40px;
+ background:#354d59;
+ clip-path:polygon(50% 0,100% 100%,0 100%);
+}
+
+.mouth{
+ position:absolute;
+ top:177px;
+ left:87px;
+ width:46px;
+ height:15px;
+ border-top:4px solid #263c49;
+ border-bottom:4px solid #263c49;
+}
+
+.doomword{
+ position:fixed;
+ font-size:100px;
+ font-weight:900;
+ letter-spacing:15px;
+ color:#ffffff;
+ opacity:.035;
+ transform:rotate(-20deg);
+ top:40%;
+ left:-15px;
+ pointer-events:none;
+ z-index:0;
+}
+
+#surprise{
+ display:none;
+ margin-top:20px;
+ padding:22px;
+ border-radius:18px;
+ background:#0d3158;
+ border:1px solid #55baff;
+}
+
+#surprise h2{
+ color:#a5ddff;
+}
+
+.particle{
+ position:fixed;
+ top:-20px;
+ pointer-events:none;
+ animation:fall linear forwards;
+ z-index:5;
+}
+
+@keyframes fall{
+ to{
+  transform:translateY(110vh) rotate(500deg);
+  opacity:0;
+ }
+}
+
+.footer{
+ padding:25px;
+ color:#78bce9;
+ font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="doomword">DOOM</div>
+
+<div class="container">
+
+<div class="card">
+
+<p class="small">A LEGENDARY DAY BEGINS</p>
+
+<div class="doom">
+ <div class="hood"></div>
+ <div class="mask"></div>
+ <div class="eye left"></div>
+ <div class="eye right"></div>
+ <div class="nose"></div>
+ <div class="mouth"></div>
+</div>
+
+<p class="small">THE WORLD IS CELEBRATING</p>
+
+<h1>ALOK</h1>
+
+<div class="age">21 YEARS OLD</div>
+
+<h2>🎂 HAPPY BIRTHDAY 🎂</h2>
+
+<p>
+Today is not just another day.
+It's the beginning of another amazing
+chapter of your life.
+</p>
+
+<button onclick="openSurprise()">
+UNLOCK YOUR SURPRISE 🎁
+</button>
+
+<div id="surprise">
+<h2>⚡ A MESSAGE FOR ALOK ⚡</h2>
+
+<p>
+Dear Alok,
+
+21 years of memories, experiences and dreams.
+May this new chapter bring you courage to face
+every challenge, strength to achieve your goals
+and happiness in every little moment.
+
+Never stop believing in yourself.
+Keep learning, keep growing and keep shining.
+
+May your future be bigger than your dreams
+and your success louder than your doubts.
+
+You deserve an amazing year ahead!
+
+</p>
+
+<h2>HAPPY 21st BIRTHDAY! 💙</h2>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>⚔️ THE NEXT CHAPTER ⚔️</h2>
+
+<p>
+New age. New goals. New adventures.
+A stronger version of yourself begins today.
+</p>
+
+<h2>STAY STRONG. STAY LEGENDARY.</h2>
+
+</div>
+
+<div class="footer">
+CREATED WITH ❤️ FOR ALOK
+<br><br>
+21st Birthday Special Edition
+</div>
+
+</div>
+
+<script>
+
+function openSurprise(){
+
+ document.getElementById("surprise").style.display="block";
+
+ const icons=["💙","✨","🎉","⚡","🎂","⭐"];
+
+ for(let i=0;i<55;i++){
+
+  let p=document.createElement("div");
+
+  p.className="particle";
+
+  p.innerText=icons[Math.floor(Math.random()*icons.length)];
+
+  p.style.left=Math.random()*100+"vw";
+
+  p.style.fontSize=(15+Math.random()*22)+"px";
+
+  p.style.animationDuration=(2+Math.random()*4)+"s";
+
+  document.body.appendChild(p);
+
+  setTimeout(()=>p.remove(),6000);
+
+ }
+
+}
+
+</script>
+
+</body>
+</html>
